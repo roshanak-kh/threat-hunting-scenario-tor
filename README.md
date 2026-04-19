@@ -93,7 +93,7 @@ In short: the Tor Browser was launched and functioning normally—Firefox connec
 
 ```kql
 DeviceNetworkEvents
-| where DeviceName =="roshi-kh-threat"
+|where DeviceName =="roshi-kh-threat"
 |where InitiatingProcessAccountName =="rkh"
 |where RemotePort in ("9001","9030","9050","9051","9150","9151")
 |project TimeGenerated,DeviceName, InitiatingProcessFileName,ActionType, AccountName=InitiatingProcessAccountName,RemotePort,RemoteUrl,RemoteIP,InitiatingProcessFolderPath
